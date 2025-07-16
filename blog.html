@@ -9,77 +9,312 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">Tapiwa Muwomo</div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sfmc.html">SFMC Developer</a></li>
-        <li><a href="pardot.html">Pardot</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- Hero -->
-  <header class="hero">
-    <img src="assets/profile-placeholder.png" alt="Tapiwa Mathew Muwomo" class="profile-img" />
-    <h1>Tapiwa Mathew Muwomo</h1>
-    <p class="tagline">Salesforce Developer | Implementation Specialist | Blog & Projects</p>
-    <div class="contact-links">
-      <a href="mailto:muwomotapiwa@gmail.com">muwomotapiwa@gmail.com</a>
-      <span> | Johannesburg, South Africa | </span>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">Tapiwa Muwomo</div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sfmc.html">SFMC Developer</a></li>
+      <li><a href="pardot.html">Pardot</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <img src="assets/profile-placeholder.png" alt="Tapiwa Mathew Muwomo" class="profile-img" />
+  <h1>Tapiwa Mathew Muwomo</h1>
+  <p class="tagline">Salesforce Developer | Implementation Specialist | Blog & Projects</p>
+  <div class="contact-links">
+    <a href="mailto:muwomotapiwa@gmail.com">muwomotapiwa@gmail.com</a>
+    <span> | Johannesburg, South Africa | </span>
+    <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
+    <span> | </span>
+    <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
+    <span> | </span>
+    <a href="assets/Tapiwa_Muwomo_Resume.pdf" target="_blank">Download Resume</a>
+  </div>
+  <button id="toggle-theme">Toggle Dark Mode</button>
+</header>
+
+<!-- Blog Section -->
+<section class="summary">
+  <h2>My Blog – Salesforce Projects & Integrations</h2>
+  <p>Welcome to my blog! Here I share insights, tutorials, and case studies on Salesforce implementations, integrations, and best practices. From Marketing Cloud to Pardot and beyond, explore how I leverage Salesforce to drive business success.</p>
+  <p>Check out my latest posts below:</p>
+  <article class="experience-entry">
+  <div class="blog-post collapsed">
+    <h2>Driving Smart CRM Decisions with a Salesforce Marketing Cloud Scoring Engine</h2>
+    <img src="assets/salesforce_crm_survey_dashboard.png"
+          alt="Salesforce CRM Survey Dashboard"
+          style="width: 100%; max-width: 900px; border-radius: 10px; margin: 20px 0;" />
+
+    <p>In today’s data-driven landscape, businesses crave actionable insights to make better CRM decisions. To address this, we built a dynamic, multi-step <strong>CRM Audit Survey platform</strong> within <strong>Salesforce Marketing Cloud</strong>. The result? A fully automated engine that collects responses, scores users, segments them into tiers, and pushes qualified leads directly into Salesforce — all with a few clicks and zero friction.</p>
+
+    <div class="blog-content">
+      <h3>Turning Clicks into Leads: The Survey Flow</h3>
+      <p>The user journey starts on a beautifully styled <strong>Cloud Page form</strong>, built with AMPscript and SSJS, and ends in Salesforce CRM with a qualified lead record. Here’s how it works:</p>
+
+      <ul>
+        <li><strong>Multi-Step Experience:</strong> The survey unfolds across multiple steps with conditional logic and real-time validation.</li>
+        <li><strong>AMPscript Magic:</strong> Responses are stored in a Data Extension named <code>Survey_Responses</code>, along with submission time and user identifiers.</li>
+        <li><strong>Personalized Thank-You:</strong> Based on the answers, users are redirected to a tailored confirmation page, thanking them by name and showing their CRM readiness level.</li>
+      </ul>
+
+      <h3>Behind the Scenes: Automation Studio + SSJS</h3>
+
+      <h4>Scoring Logic & Tier Assignment</h4>
+      <p>An <strong>Automation Studio workflow</strong> processes newly submitted records. It runs SQL queries and scripts to compute:</p>
+      <ul>
+        <li><code>CRM_Tier</code> – e.g., “CRM Newbie”, “CRM Pro, But Messy”</li>
+        <li><code>Total_Score</code> and <code>Bonus_Score</code></li>
+        <li>Top opportunities and tailored recommendations</li>
+      </ul>
+      <p>Scored results are then inserted into a separate DE: <code>CRM_Audit_Results_Email_List</code>.</p>
+
+      <h4>Sending Smart Emails</h4>
+      <p>A confirmation email is sent using AMPscript and dynamic content blocks to reflect each user’s CRM Tier, key gaps, and next steps. It even includes links to relevant case studies like REA Group or Intrepid, increasing value and engagement.</p>
+
+      <h4>Pushing to Salesforce in Real-Time</h4>
+      <p>Using <strong>SSJS and the Salesforce REST API</strong>, leads are pushed into Salesforce from the results Data Extension. This involves:</p>
+      <ul>
+        <li><strong>OAuth Authentication</strong> using a Connected App</li>
+        <li><strong>SSJS script</strong> that runs on insert to map key fields (Name, Email, CRM Tier, Business Line)</li>
+        <li><strong>Lead Source:</strong> Automatically set to “Survey Form”</li>
+      </ul>
+      <p>This ensures marketing-qualified leads hit Salesforce in near real-time — no manual syncing required.</p>
+
+      <h3>What Worked, What Didn’t: Lessons Learned</h3>
+      <ul>
+        <li><strong>AMPscript & JavaScript Synergy:</strong> Seamlessly captured data across steps with validations and hidden fields.</li>
+        <li><strong>Challenge:</strong> Unselected dropdown values were being submitted — resolved with JavaScript field handling and required logic.</li>
+        <li><strong>Scoring Transparency:</strong> Stored raw responses, scores, and final recommendations in DEs for full visibility.</li>
+        <li><strong>Challenge:</strong> SSJS push initially failed on expired tokens — fixed via automated token refresh and better logging.</li>
+      </ul>
+
+      <h3>How It Can Be Improved Further</h3>
+      <ul>
+        <li><strong>Switch to Data Cloud:</strong> Real-time profile unification and segmentation</li>
+        <li><strong>Use Einstein Scoring:</strong> Enhance lead quality analysis with AI-generated insights</li>
+        <li><strong>PDF Report Builder:</strong> Auto-generate downloadable results with the user’s CRM health and next steps</li>
+        <li><strong>Journey Builder Triggers:</strong> Replace Automation Studio with event-based journeys for even faster response times</li>
+      </ul>
+
+      <h3>Conclusion</h3>
+      <p>This project showcases how Salesforce Marketing Cloud isn’t just for emails — it’s a full-fledged <strong>lead intelligence engine</strong> when combined with AMPscript, SSJS, and a thoughtful DE strategy. By turning survey data into actionable CRM insights, we empowered the business to target the right customers with the right solutions — and saved hours of manual work in the process.</p>
+    </div>
+
+    <button class="read-more-btn" onclick="toggleBlog(this)">Read More</button>
+  </div>
+</article>
+
+  <!-- DocuSign Blog Post -->
+<article class="experience-entry">
+  <div class="blog-post collapsed">
+    <h2>Streamlining Business with Salesforce DocuSign Integration</h2>
+    <img src="assets/salesforce_docusign_image.png" 
+         alt="Salesforce DocuSign Integration" 
+         style="width: 100%; max-width: 900px; border-radius: 10px; margin: 20px 0;" />
+
+    <p>In today's fast-paced business environment, efficiency and automation are paramount. Companies are constantly seeking ways to optimize their workflows, reduce manual tasks, and accelerate critical processes. One area where significant gains can be made is in agreement management, and the integration of Salesforce with DocuSign stands out as a powerful solution.</p>
+
+    <div class="blog-content">
+      <h3>The Power of Salesforce and DocuSign Combined</h3>
+      <p>Salesforce, the world's leading cloud-based customer relationship management (CRM) platform, provides a comprehensive view of customer interactions. DocuSign, a pioneer in electronic signature technology, enables secure and legally binding e-signatures. When these two robust platforms are integrated, they create a synergistic ecosystem that revolutionizes how businesses handle agreements.</p>
+
+      <ul>
+        <li>Shorten Sales Cycles</li>
+        <li>Increase Close Rates</li>
+        <li>Reduce Paper Waste</li>
+        <li>Enhance Security and Compliance</li>
+        <li>Gain Real-time Visibility</li>
+      </ul>
+
+      <h3>Key Features of Salesforce DocuSign Integration</h3>
+
+      <h4>Automated Document Generation</h4>
+      <p>DocuSign Gen for Salesforce automates the creation of professional documents directly from Salesforce data. It merges customer, product, and pricing data into templates, ensuring consistency and reducing errors. Ideal for legal documents and high-volume needs.</p>
+
+      <h4>Pre-filling Dynamic Fields</h4>
+      <p>Map Salesforce fields to DocuSign merge fields for auto-filled customer and pricing data. This supports personalized flows via Apex Toolkit and APIs.</p>
+
+      <h4>Sending Envelopes Directly from Salesforce</h4>
+      <p>Initiate e-signature requests from any record using templates and bulk sending features embedded directly into Salesforce.</p>
+
+      <h4>Event-Based Triggers and Status Tracking</h4>
+      <p>React to DocuSign events like “Signed” or “Declined” using real-time triggers in Salesforce. Track document lifecycle via the DocuSign Status object and scheduled Apex jobs.</p>
+
+      <h3>Real-World Impact: An Advanced Implementation Example</h3>
+      <p>I led a Salesforce–DocuSign integration project that automated legal doc generation, used dynamic fields, and tracked envelope lifecycle with custom LWC components.</p>
+
+      <ul>
+        <li>Automating Legal Document Generation</li>
+        <li>Ensuring Data Accuracy</li>
+        <li>Centralized Envelope Management</li>
+        <li>Proactive Workflow Automation</li>
+        <li>Enhanced Visibility with Custom LWCs</li>
+      </ul>
+
+      <h3>Conclusion</h3>
+      <p>Salesforce DocuSign integration is more than e-signatures. It automates full agreement workflows—document creation, envelope sending, and event tracking—while reducing costs and enhancing efficiency. It’s a must-have for businesses aiming to optimize their Salesforce investment.</p>
+    </div>
+
+    <button class="read-more-btn" onclick="toggleBlog(this)">Read More</button>
+  </div>
+</article>
+
+
+  <!-- Adobe Sign Blog -->
+  <article class="experience-entry">
+  <div class="blog-post collapsed">
+    <h2>Streamlining Business with Salesforce Adobe Sign Integration</h2>
+    <img src="assets/salesforce_adobesign_image.png" 
+          alt="Salesforce Adobe Sign Integration" 
+          style="width: 100%; max-width: 900px; border-radius: 10px; margin: 20px 0;" />
+
+    <p>In today's fast-paced business environment, efficiency and automation are paramount. Companies are constantly seeking ways to optimize their workflows, reduce manual tasks, and accelerate critical processes. One area where significant gains can be made is in agreement management, and the integration of Salesforce with Adobe Sign stands out as a powerful solution.</p>
+
+    <div class="blog-content">
+      <h3>The Power of Salesforce and Adobe Sign Combined</h3>
+      <p>Salesforce, the world's leading cloud-based customer relationship management (CRM) platform, provides a comprehensive view of customer interactions. Adobe Sign, a robust e-signature solution, enables secure and legally binding electronic signatures. When these two powerful platforms are integrated, they create a synergistic ecosystem that revolutionizes how businesses handle agreements.</p>
+
+      <ul>
+        <li>Shorten Sales Cycles</li>
+        <li>Increase Close Rates</li>
+        <li>Reduce Paper Waste</li>
+        <li>Enhance Security and Compliance</li>
+        <li>Gain Real-time Visibility</li>
+      </ul>
+
+      <h3>Key Features of Salesforce Adobe Sign Integration</h3>
+
+      <h4>Automated Document Generation and Sending</h4>
+      <p>Adobe Sign for Salesforce automates the creation of professional documents and the initiation of e-signature requests directly from Salesforce data. It merges customer, product, and pricing information into templates, ensuring consistency and reducing errors. This is ideal for legal documents and high-volume needs, allowing users to send sign requests directly from record pages with a user-friendly interface.</p>
+
+      <h4>Seamless Data Mapping and Dynamic Fields</h4>
+      <p>Map Salesforce fields to Adobe Sign merge fields for auto-filled customer and pricing data. This supports personalized flows via **Apex classes** and **Adobe Sign APIs**, ensuring that contracts and agreements are accurately populated with relevant information, reducing manual data entry and potential errors.</p>
+
+      <h4>Secure API Integration with OAuth and Named Credentials</h4>
+      <p>To ensure secure and reliable communication between Salesforce and Adobe Sign, **OAuth** is implemented for authentication. This, combined with the configuration of **Named Credentials**, allows for secure and streamlined callouts to the Adobe Sign APIs without exposing sensitive credentials in code, enhancing both security and ease of management.</p>
+
+      <h4>Event-Based Triggers and Status Tracking</h4>
+      <p>React to Adobe Sign events like “Signed” or “Declined” using real-time triggers in Salesforce. The solution includes robust tracking of document status and provides **centralized logging using Platform Events**. This enables proactive workflow automation based on the document lifecycle and ensures a clear audit trail of all signing activities.</p>
+
+      <h3>Real-World Impact: An Advanced Implementation Example</h3>
+      <p>I led a Salesforce–Adobe Sign integration project that significantly streamlined document approval processes and enhanced user experience. This implementation provided a robust solution for sending sign requests directly from Salesforce record pages.</p>
+
+      <ul>
+        <li>**Custom Screen Flows and Apex Classes:** I built custom screen flows that guided users through the document sending process, making it intuitive and efficient. These flows leveraged **Apex classes** for handling the complex interactions with the Adobe Sign APIs.</li>
+        <li>**Secure API Access:** Implemented **OAuth** for secure authentication and configured **Named Credentials** to manage API endpoints and credentials safely, ensuring robust and secure communication between Salesforce and Adobe Sign.</li>
+        <li>**Real-time Document Status Tracking:** The solution allowed for comprehensive tracking of document status within Salesforce, providing users with immediate updates on the progress of their sign requests.</li>
+        <li>**Centralized Logging with Platform Events:** Utilized **Platform Events** for centralized logging of all document activities, offering a clear, auditable trail and enabling proactive monitoring and troubleshooting.</li>
+        <li>**User-Friendly UI:** Developed a user-friendly interface for initiating sign requests, significantly improving the overall user experience and adoption of the new process.</li>
+      </ul>
+
+      <h3>Conclusion</h3>
+      <p>Salesforce Adobe Sign integration is more than just e-signatures. It automates full agreement workflows—from document generation and envelope sending to event tracking and centralized logging—while reducing costs and enhancing efficiency. It’s a must-have for businesses aiming to optimize their Salesforce investment and streamline their document approval processes.</p>
+    </div>
+
+    <button class="read-more-btn" onclick="toggleBlog(this)">Read More</button>
+  </div>
+</article>
+
+<article class="experience-entry">
+  <div class="blog-post collapsed">
+    <h2>Revolutionizing Donor Verification with Salesforce and Secure Email Workflows</h2>
+    <img src="assets/salesforce_donor_verification.png"
+          alt="Salesforce Donor Verification"
+          style="width: 100%; max-width: 900px; border-radius: 10px; margin: 20px 0;" />
+
+    <p>For any non-profit issuing tax certificates, efficient and compliant <strong>donor management</strong> is non-negotiable. This project delivered a game-changing solution: a secure, self-service <strong>Section 18A verification platform</strong> built entirely on <strong>Salesforce</strong>. It empowers both individual and organizational donors to effortlessly verify and update their details online, all while guaranteeing <strong>data security, full auditability, and unparalleled ease of use</strong>. This innovative approach eliminated manual back-and-forth, drastically cutting down verification delays and freeing up valuable staff time.</p>
+
+    <div class="blog-content">
+      <h3>Automating the Verification Journey: How It Works</h3>
+      <p>The system orchestrates a seamless, automated process—from a secure email trigger to a guided, intuitive form experience, culminating in updated donor information and confirmed certificate eligibility.</p>
+
+      <ul>
+        <li><strong>Personalized Outreach:</strong> Donors receive a unique, time-sensitive verification link directly in their email.</li>
+        <li><strong>Secure Access:</strong> Clicking the link opens a secure <strong>Lightning Web Component (LWC)</strong> form, requiring a one-time verification code for access.</li>
+        <li><strong>Intelligent Data Prefill:</strong> Upon successful verification, users are seamlessly guided to a dynamic update form, pre-filled with their existing data for convenience.</li>
+        <li><strong>Instant Updates & Confirmation:</strong> Submitting the form instantly updates their record in Salesforce and presents a custom-branded thank-you page, clearly outlining next steps.</li>
+      </ul>
+
+      <h3>Key Features & Underlying Technologies</h3>
+
+      <h4>Robust Security: Code and Token Generation with Apex</h4>
+      <p>Both Account and Contact records are rigorously secured. During initial creation, a <strong>SHA256-encrypted token</strong> and a random alphanumeric verification code are automatically generated. These tokens are refreshed if they expire or upon manual request, ensuring continuous security and data integrity through dedicated <strong>Apex Trigger Handlers</strong>.</p>
+
+      <h4>Automated Management: Expiry Handling via Scheduled Apex</h4>
+      <p>To maintain evergreen access, two dedicated <strong>Scheduled Apex jobs</strong> (one for Accounts, one for Contacts) run nightly. These jobs automatically regenerate expired codes and tokens, guaranteeing that every verification token remains valid for at least 24 hours, minimizing donor frustration.</p>
+
+      <h4>Professional Communication: Branded Email Delivery</h4>
+      <p>When staff initiate a verification request (via a custom <strong>LWC button</strong>), Apex dynamically generates a secure, personalized URL. This triggers the dispatch of a beautifully styled email, complete with a custom message, an expiry notice, and a prominent call-to-action button, ensuring a professional and consistent donor experience.</p>
+
+      <h4>Dynamic Frontend: Responsive Lightning Web Components (LWCs)</h4>
+      <p>The donor-facing experience is powered by a suite of responsive <strong>Lightning Web Components</strong>, all seamlessly embedded within <strong>Experience Cloud</strong> for a cohesive brand presence:</p>
+      <ul>
+        <li>An intuitive <strong>verification form</strong> for code entry.</li>
+        <li>A user-friendly form for updating <strong>Account or Contact information</strong>.</li>
+        <li>A clear <strong>thank-you page</strong> that provides concise next steps and confirmation.</li>
+      </ul>
+
+      <h4>Seamless User Flow: Real-time Validation & Auto-Redirects</h4>
+      <p>Token validation occurs instantly upon page load, ensuring immediate feedback. Successful verification automatically redirects users to the correct update form using <strong>NavigationMixin</strong> or direct URL handling. Upon submission, they are then smoothly guided to a final confirmation page, completing the verification loop without a hitch.</p>
+
+      <h3>Transformative Real-World Impact</h3>
+      <ul>
+        <li><strong>Significant Admin Effort Reduction:</strong> Staff are no longer burdened with manual follow-ups for tax certificate details, freeing them for more strategic tasks.</li>
+        <li><strong>Accelerated Turnaround Times:</strong> Donors can now effortlessly verify and update their information in under 5 minutes, dramatically improving efficiency.</li>
+        <li><strong>Enhanced Security & Compliance:</strong> The entire system is built with a security-first mindset, featuring audited code, encryption, and automatic token expiry for peace of mind.</li>
+        <li><strong>Superior User Experience:</strong> Branded, mobile-friendly LWCs deliver a seamless and professional experience, fostering trust and and engagement with donors.</li>
+        <li><strong>Robust Code Quality:</strong> All Apex classes and triggers boast comprehensive test coverage, ensuring reliable deployments and system integrity.</li>
+      </ul>
+
+      <h3>Conclusion</h3>
+      <p>This project stands as a testament to Salesforce's versatility, showcasing its potential to be transformed into a secure, branded <strong>self-service portal</strong> for critical compliance workflows. The intelligent fusion of <strong>Apex logic, custom metadata, scheduled jobs, and dynamic LWCs</strong> provides a powerful, scalable, and auditable foundation. This solution is not just about donor verification; it's a blueprint for any organization seeking to streamline regulated interactions and maximize their Salesforce investment.</p>
+    </div>
+
+    <button class="read-more-btn" onclick="toggleBlog(this)">Read More</button>
+  </div>
+</article>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-name">
+      <strong>Tapiwa Mathew Muwomo</strong><br />
+      Salesforce Developer | CRM Specialist
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:muwomotapiwa@gmail.com">Email</a>
       <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
-      <span> | </span>
       <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
-      <span> | </span>
       <a href="assets/Tapiwa_Muwomo_Resume.pdf" target="_blank">Download Resume</a>
     </div>
-    <button id="toggle-theme">Toggle Dark Mode</button>
-  </header>
 
-  <!-- Blog Section -->
-  <section class="summary">
-    <h2>My Blog – Salesforce Projects & Integrations</h2>
-    <article class="experience-entry">
-      <h3>Advanced DocuSign Integration for Salesforce</h3>
-      <p class="job-title">Client Project | 2024</p>
-      <p>I led an advanced Salesforce DocuSign implementation that automated legal document generation, pre-filled dynamic fields using Apex, and sent envelopes directly from Salesforce. The automation included event-based triggers and tracking statuses within Salesforce. Custom LWC components were used to track the document lifecycle, and webhook-based callbacks were integrated with Apex REST for real-time syncing.</p>
-    </article>
-
-    <article class="experience-entry">
-      <h3>Adobe Sign Integration for Salesforce</h3>
-      <p class="job-title">Client Project | 2023</p>
-      <p>This implementation supported document approvals and user-friendly UI for sending sign requests from record pages. I built custom screen flows and Apex classes for handling Adobe Sign APIs, implemented OAuth for secure access, and configured Named Credentials. The solution allowed tracking of document status and centralized logging using Platform Events.</p>
-    </article>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-name">
-        <strong>Tapiwa Mathew Muwomo</strong><br />
-        Salesforce Developer | CRM Specialist
-      </div>
-
-      <div class="footer-links">
-        <a href="mailto:muwomotapiwa@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
-        <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
-        <a href="assets/Tapiwa_Muwomo_Resume.pdf" target="_blank">Download Resume</a>
-      </div>
-
-      <div class="footer-note">
-        <p>© 2025 Tapiwa Muwomo. Built with 💙 HTML, CSS & JS.</p>
-      </div>
+    <div class="footer-note">
+      <p>© 2025 Tapiwa Muwomo. Built with 💙 HTML, CSS & JS.</p>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
+<script>
+  function toggleBlog(button) {
+    const blogPost = button.closest('.blog-post');
+    blogPost.classList.toggle('expanded');
+    button.textContent = blogPost.classList.contains('expanded') ? 'Read Less' : 'Read More';
+  }
+</script>
+
 </body>
 </html>
