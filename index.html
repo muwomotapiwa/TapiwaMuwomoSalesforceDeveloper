@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tapiwa Mathew Muwomo - Salesforce Developer Portfolio" />
+  <title>Tapiwa Mathew Muwomo | Salesforce Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <img src="assets/profile-placeholder.png" alt="Tapiwa Mathew Muwomo" class="profile-img" />
+    <h1>Tapiwa Mathew Muwomo</h1>
+    <p class="tagline">Salesforce Admin & Developer | Apex, LWC, DX, API-first Architecture</p>
+    <div class="contact-links">
+      <a href="mailto:muwomotapiwa@gmail.com">muwomotapiwa@gmail.com</a>
+      <span> | Johannesburg, South Africa | </span>
+      <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
+      <span> | </span>
+      <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
+      <span> | </span>
+      <a href="assets/Tapiwa_Muwomo_Resume.pdf" target="_blank">Download Resume</a>
+    </div>
+    <button id="toggle-theme">Toggle Dark Mode</button>
+  </header>
+
+  <section class="summary">
+    <h2>Professional Summary</h2>
+    <p>
+      Certified Salesforce Developer and Full-Stack CRM Professional with 5 years of experience designing scalable, cross-cloud Salesforce solutions. Holds 9 Salesforce certifications across core CRM, Marketing Cloud, and Pardot. Specialized in Apex, Lightning Web Components, API integrations, and DX-driven development. Proficient in designing robust CRM data models, flows, and scalable UI with security and performance best practices.
+    </p>
+    <p>
+      Equally experienced across cross-cloud environments, including Marketing Cloud (AMPscript, SSJS, Automation Studio) and Pardot (lead scoring, engagement journeys, form integration). Skilled in REST/SOAP APIs, approval workflows, Git, and Agile methodologies. Adept at translating business needs into scalable, maintainable technical solutions.
+    </p>
+  </section>
+
+  <section class="certifications">
+    <h2>Certifications</h2>
+    <div class="cert-badges">
+      <span data-cert="admin">Salesforce Certified Administrator</span>
+      <span data-cert="appbuilder">Salesforce Certified Platform App Builder</span>
+      <span data-cert="dev1">Salesforce Certified Platform Developer I</span>
+      <span data-cert="service">Salesforce Certified Service Cloud Consultant</span>
+      <span data-cert="data">Salesforce Certified Data Cloud Consultant</span>
+      <span data-cert="omni">Salesforce Certified OmniStudio Consultant</span>
+      <span data-cert="mcdev">Salesforce Certified Marketing Cloud Developer</span>
+      <span data-cert="mcemail">Salesforce Certified Marketing Cloud Email Specialist</span>
+      <span data-cert="pardot">Salesforce Certified Marketing Cloud Account Engagement Specialist</span>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>Technical Skills</h2>
+    <div class="skill-group">
+      <h3>Salesforce Platform</h3>
+      <ul>
+        <li>Apex (Triggers, Classes, Batch, Schedulable)</li>
+        <li>Lightning Web Components (LWC), Aura</li>
+        <li>SOQL, SOSL, Data Modeling</li>
+        <li>Flows, Validation Rules, Approval Processes</li>
+        <li>Salesforce DX, Unlocked Packages</li>
+        <li>REST/SOAP APIs, Integration Patterns</li>
+        <li>Security Model: Profiles, Roles, Permission Sets, Sharing Rules</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Cross-Cloud</h3>
+      <ul>
+        <li>Marketing Cloud (AMPscript, CloudPages, SQL, Automation Studio)</li>
+        <li>Pardot (Forms, Engagement Studio, Lead Scoring & Grading)</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Web & Tooling</h3>
+      <ul>
+        <li>JavaScript (ES6+), HTML5, CSS3</li>
+        <li>VS Code, Git, Salesforce CLI, Workbench</li>
+        <li>Data Loader, Postman, Developer Console</li>
+        <li>Agile/Scrum, Jira</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built with HTML, CSS, and 💙 by Tapiwa Muwomo</p>
+  </footer>
+
+  <!-- Certification Modal -->
+  <div id="certModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="certImage" src="assets/cert-placeholder.png" alt="Certification Badge">
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

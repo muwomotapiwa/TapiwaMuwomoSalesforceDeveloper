@@ -1,0 +1,196 @@
+/* === Global Styles === */
+:root {
+  --primary: #032d60;
+  --accent: #00a1e0;
+  --background: #ffffff;
+  --text: #1a1a1a;
+  --badge-bg: #e0f3ff;
+  --badge-text: #032d60;
+  --modal-bg: rgba(0, 0, 0, 0.8);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  --background: #1a2132;
+  --text: #f6f6f6;
+  --badge-bg: #0e3b61;
+  --badge-text: #00a1e0;
+  --modal-bg: rgba(255, 255, 255, 0.9);
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* === Hero Section === */
+.hero {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid var(--accent);
+}
+
+.hero .tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.contact-links a {
+  color: white;
+  text-decoration: underline;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+#toggle-theme {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* === Sections === */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* === Certifications === */
+.cert-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cert-badges span {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cert-badges span:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* === Skills Section === */
+.skill-group {
+  margin-bottom: 30px;
+}
+
+.skill-group h3 {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  background: #f5f5f5;
+  color: #555;
+}
+
+/* === Modal === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--modal-bg);
+}
+
+.modal-content {
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  margin: 80px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .cert-badges {
+    justify-content: center;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    max-height: 70%;
+  }
+}
+
+/* === Glow on Hover === */
+.cert-badges span:hover {
+  box-shadow: 0 0 10px var(--accent);
+}
