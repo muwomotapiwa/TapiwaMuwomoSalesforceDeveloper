@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tapiwa Mathew Muwomo - Salesforce Marketing Cloud Developer Portfolio" />
+  <title>Tapiwa Muwomo | SFMC Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Tapiwa Muwomo</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sfmc.html">SFMC Developer</a></li>
+        <li><a href="pardot.html">Pardot</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <img src="assets/profile-placeholder.png" alt="Tapiwa Mathew Muwomo" class="profile-img" />
+    <h1>Tapiwa Mathew Muwomo</h1>
+    <p class="tagline">Salesforce Marketing Cloud Developer | AMPscript, Journeys, CloudPages</p>
+    <div class="contact-links">
+      <a href="mailto:muwomotapiwa@gmail.com">muwomotapiwa@gmail.com</a>
+      <span> | Johannesburg, South Africa | </span>
+      <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
+      <span> | </span>
+      <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
+      <span> | </span>
+      <a href="assets/Tapiwa_MarketingCloud_Resume.pdf" target="_blank">Download Resume</a>
+    </div>
+    <button id="toggle-theme">Toggle Dark Mode</button>
+  </header>
+
+  <!-- Summary -->
+  <section class="summary">
+    <h2>Professional Summary</h2>
+    <p>
+      Certified Salesforce Marketing Cloud Developer with 5+ years’ experience designing and implementing data-driven customer journeys using AMPscript, SSJS, SQL, and API integrations. Expert in CloudPages, Automation Studio, and personalized email strategy across B2C and B2B channels.
+    </p>
+    <p>
+      Proven success with complex segmentation, REST API integrations, lead nurturing, email deliverability, and campaign automation for enterprise clients. Equally proficient across Email Studio, Journey Builder, Contact Builder, and real-time interaction tracking.
+    </p>
+  </section>
+  
+  <section class="experience">
+  <h2>Work Experience</h2>
+
+  <div class="experience-entry">
+    <h3>Tetrad Group</h3>
+    <p class="job-title">Salesforce Marketing Cloud Developer | 2022 – Present</p>
+    <ul>
+      <li>Led Salesforce Marketing Cloud development for clients in the UK and South Africa across B2C and B2B sectors</li>
+      <li>Built and optimized automated customer journeys using Journey Builder, SQL filters, and real-time triggers</li>
+      <li>Developed dynamic AMPscript-powered emails and CloudPages for gated content, lead capture, and consent management</li>
+      <li>Integrated SFMC with Salesforce CRM and external systems via REST/SOAP APIs and custom tokens</li>
+      <li>Designed and executed high-volume, personalized campaigns improving engagement and deliverability KPIs</li>
+      <li>Created robust data extensions, automations, and triggered sends for lifecycle marketing programs</li>
+      <li>Managed end-to-end deployment of re-engagement and onboarding journeys using Automation Studio</li>
+      <li>Conducted deliverability audits and implemented SPF/DKIM/DMARC configuration to improve inbox placement</li>
+    </ul>
+  </div>
+</section>
+
+
+  <!-- SFMC Skills -->
+  <section class="skills">
+    <h2>Marketing Cloud Skills</h2>
+    <div class="skill-group">
+      <h3>Core Platform</h3>
+      <ul>
+        <li>Journey Builder & Automation Studio</li>
+        <li>AMPscript, Server-Side JavaScript (SSJS)</li>
+        <li>CloudPages: dynamic forms, preference centers, lead capture</li>
+        <li>REST/SOAP API Integration & Data Extensions</li>
+        <li>Contact Builder, Email Studio, Content Builder</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Advanced</h3>
+      <ul>
+        <li>Triggered Sends, Transactional Emails</li>
+        <li>Email deliverability, SPF/DKIM setup, CAN-SPAM compliance</li>
+        <li>SQL for segmentation, reporting, and personalization</li>
+        <li>SSJS for token validation, form handling, and API responses</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Placeholder for SFMC Certifications -->
+  <section class="certifications">
+    <h2>Certifications</h2>
+    <div class="cert-badges">
+      <span data-cert="mcdev">Marketing Cloud Developer</span>
+      <span data-cert="mcemail">Marketing Cloud Email Specialist</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-name">
+        <strong>Tapiwa Mathew Muwomo</strong><br />
+        Salesforce Marketing Cloud Developer | CRM Automation
+      </div>
+      <div class="footer-links">
+        <a href="mailto:muwomotapiwa@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
+        <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
+        <a href="assets/Tapiwa_MarketingCloud_Resume.pdf" target="_blank">Download Resume</a>
+      </div>
+      <div class="footer-note">
+        <p>© <span id="year"></span> Tapiwa Muwomo. Built with 💙 HTML, CSS & JS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Certification Modal -->
+  <div id="certModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="certImage" src="assets/cert-placeholder.png" alt="Certification Badge">
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

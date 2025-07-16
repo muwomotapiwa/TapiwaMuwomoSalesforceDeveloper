@@ -9,6 +9,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Tapiwa Muwomo</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sfmc.html">SFMC Developer</a></li>
+        <li><a href="pardot.html">Pardot</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header class="hero">
     <img src="assets/profile-placeholder.png" alt="Tapiwa Mathew Muwomo" class="profile-img" />
     <h1>Tapiwa Mathew Muwomo</h1>
@@ -34,6 +50,41 @@
       Equally experienced across cross-cloud environments, including Marketing Cloud (AMPscript, SSJS, Automation Studio) and Pardot (lead scoring, engagement journeys, form integration). Skilled in REST/SOAP APIs, approval workflows, Git, and Agile methodologies. Adept at translating business needs into scalable, maintainable technical solutions.
     </p>
   </section>
+
+  <section class="experience">
+  <h2>Work Experience</h2>
+
+  <!-- Tetrad Group -->
+  <div class="experience-entry">
+    <h3>Tetrad Group</h3>
+    <p class="job-title">Salesforce Developer & Administrator | 2022 – Present</p>
+    <ul>
+      <li>Developed custom Apex classes, triggers, and Lightning Web Components (LWC)</li>
+      <li>Built scalable flows, validation rules, and automated approval processes</li>
+      <li>Integrated Salesforce with external apps via REST/SOAP APIs and Named Credentials</li>
+      <li>Deployed features using Salesforce DX, Git, and change sets</li>
+      <li>Maintained robust data models, custom metadata, and permission frameworks</li>
+      <li>Created interactive dashboards and performance reports for stakeholders</li>
+      <li>Led CRM optimization projects improving team productivity by 30%</li>
+    </ul>
+  </div>
+
+  <!-- Parsan Cross -->
+  <div class="experience-entry">
+    <h3>Parsan Cross (Contract)</h3>
+    <p class="job-title">Business Consultant & Salesforce CRM Administrator | Jan 2019 – Sep 2021</p>
+    <ul>
+      <li>Acted as CRM advisor to SMB clients, translating business needs into Salesforce workflows</li>
+      <li>Configured objects, fields, page layouts, and custom reports in Salesforce</li>
+      <li>Implemented basic automations with Process Builder and validation rules</li>
+      <li>Provided strategic input on CRM adoption, data governance, and lead tracking</li>
+      <li>Bridged communication between business teams and technical delivery partners</li>
+      <li>Laid the foundation for long-term CRM scalability by aligning systems to business goals</li>
+    </ul>
+  </div>
+</section>
+
+
 
   <section class="certifications">
     <h2>Certifications</h2>
@@ -82,9 +133,32 @@
     </div>
   </section>
 
-  <footer>
-    <p>Built with HTML, CSS, and 💙 by Tapiwa Muwomo</p>
-  </footer>
+  <section class="references">
+  <h2>References</h2>
+  <p>Professional references are available upon request.</p>
+</section>
+
+  
+  <footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-name">
+      <strong>Tapiwa Mathew Muwomo</strong><br />
+      Salesforce Developer | CRM Specialist
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:muwomotapiwa@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
+      <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
+      <a href="assets/Tapiwa_Muwomo_Resume.pdf" target="_blank">Download Resume</a>
+    </div>
+
+    <div class="footer-note">
+      <p>© <span id="year"></span> Tapiwa Muwomo. Built with 💙 HTML, CSS & JS.</p>
+    </div>
+  </div>
+</footer>
+
 
   <!-- Certification Modal -->
   <div id="certModal" class="modal">

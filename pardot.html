@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tapiwa Mathew Muwomo - Pardot Email Specialist Portfolio" />
+  <title>Tapiwa Muwomo | Pardot Email Specialist</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+ <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Tapiwa Muwomo</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sfmc.html">SFMC Developer</a></li>
+        <li><a href="pardot.html">Pardot</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <img src="assets/profile-placeholder.png" alt="Tapiwa Mathew Muwomo" class="profile-img" />
+    <h1>Tapiwa Mathew Muwomo</h1>
+    <p class="tagline">Pardot Email Specialist | Lead Gen, Engagement Studio, Scoring</p>
+    <div class="contact-links">
+      <a href="mailto:muwomotapiwa@gmail.com">muwomotapiwa@gmail.com</a>
+      <span> | Johannesburg, South Africa | </span>
+      <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
+      <span> | </span>
+      <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
+      <span> | </span>
+      <a href="assets/Tapiwa_Pardot_Resume.pdf" target="_blank">Download Resume</a>
+    </div>
+    <button id="toggle-theme">Toggle Dark Mode</button>
+  </header>
+
+  <!-- Summary -->
+  <section class="summary">
+    <h2>Professional Summary</h2>
+    <p>
+      Certified Marketing Cloud Account Engagement (Pardot) Specialist with experience designing and executing B2B marketing automation campaigns using Engagement Studio, lead scoring, and Salesforce integration. Proven ability to optimize buyer journeys, drive MQL volume, and improve nurture conversion rates.
+    </p>
+    <p>
+      Adept at managing Pardot connectors, syncing leads to Salesforce, and building custom forms, landing pages, and automation rules. Strong understanding of scoring & grading, CAN-SPAM compliance, and lifecycle stage modeling.
+    </p>
+  </section>
+
+<section class="experience">
+  <h2>Work Experience</h2>
+
+  <div class="experience-entry">
+    <h3>Tetrad Group</h3>
+    <p class="job-title">Pardot Email Specialist | 2022 – Present</p>
+    <ul>
+      <li>Led Pardot automation strategy and deployment for B2B projects across Israel and South Africa</li>
+      <li>Designed multi-step nurture programs using Engagement Studio, dynamic segmentation, and custom scoring logic</li>
+      <li>Built scalable and responsive Pardot landing pages and forms with progressive profiling and field mapping</li>
+      <li>Managed complex lead lifecycle processes including MQL conversion, lead handoff, and grading strategy</li>
+      <li>Integrated Pardot with WordPress and Salesforce CRM using form handlers, connected campaigns, and custom redirects</li>
+      <li>Implemented advanced personalization using variable tags, conditional logic, and prospect tags</li>
+      <li>Executed full-funnel campaign tracking via UTM parameters, completion actions, and reporting automation</li>
+      <li>Ran deliverability audits, configured sender authentication (SPF/DKIM), and maintained CAN-SPAM compliance</li>
+      <li>Collaborated with Sales teams to automate follow-ups, task creation, and real-time alerts for hot leads</li>
+      <li>Continuously optimized email performance via A/B testing, engagement metrics, and asset performance reports</li>
+    </ul>
+  </div>
+</section>
+
+
+  <!-- Pardot Skills -->
+  <section class="skills">
+    <h2>Pardot Skills</h2>
+    <div class="skill-group">
+      <h3>Lead Gen & Nurture</h3>
+      <ul>
+        <li>Engagement Studio automation journeys</li>
+        <li>Lead scoring and grading logic</li>
+        <li>Pardot Forms, Landing Pages, Completion Actions</li>
+        <li>Email Templates and List Emails</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Integration & Sync</h3>
+      <ul>
+        <li>Pardot-Salesforce Connector setup and management</li>
+        <li>Field mapping and connected campaigns</li>
+        <li>Form handlers, third-party form integrations</li>
+        <li>Sales alerts, dynamic lists, automation rules</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certifications">
+    <h2>Certifications</h2>
+    <div class="cert-badges">
+      <span data-cert="pardot">Marketing Cloud Account Engagement Specialist</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-name">
+        <strong>Tapiwa Mathew Muwomo</strong><br />
+        Pardot Email Specialist | CRM Engagement & Lead Generation
+      </div>
+      <div class="footer-links">
+        <a href="mailto:muwomotapiwa@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
+        <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
+        <a href="assets/Tapiwa_Pardot_Resume.pdf" target="_blank">Download Resume</a>
+      </div>
+      <div class="footer-note">
+        <p>© <span id="year"></span> Tapiwa Muwomo. Built with 💙 HTML, CSS & JS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="certModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="certImage" src="assets/cert-placeholder.png" alt="Certification Badge">
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

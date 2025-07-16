@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Tapiwa Mathew Muwomo - Salesforce Developer" />
+  <title>Contact | Tapiwa Mathew Muwomo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Tapiwa Muwomo</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sfmc.html">SFMC Developer</a></li>
+        <li><a href="pardot.html">Pardot</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="assets/profile-placeholder.png" alt="Tapiwa Mathew Muwomo" class="profile-img" />
+    <h1>Tapiwa Mathew Muwomo</h1>
+    <p class="tagline">Let's Connect — CRM Project Collaborations & Opportunities Welcome</p>
+    <div class="contact-links">
+      <a href="mailto:muwomotapiwa@gmail.com">muwomotapiwa@gmail.com</a>
+      <span> | Johannesburg, South Africa | </span>
+      <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
+      <span> | </span>
+      <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
+      <span> | </span>
+      <a href="assets/Tapiwa_Muwomo_Resume.pdf" target="_blank">Download Resume</a>
+    </div>
+    <button id="toggle-theme">Toggle Dark Mode</button>
+  </header>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <p>If you'd like to collaborate, hire, or just say hello — feel free to reach out.</p>
+
+    <form class="contact-form" action="https://formsubmit.co/muwomotapiwa@gmail.com" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label>I am a...</label>
+      <div>
+        <label><input type="radio" name="identity" value="Recruiter" required /> Recruiter</label><br />
+        <label><input type="radio" name="identity" value="Hiring Manager" /> Hiring Manager</label><br />
+        <label><input type="radio" name="identity" value="Client / Business" /> Client / Business</label><br />
+        <label><input type="radio" name="identity" value="Developer" /> Developer</label><br />
+        <label><input type="radio" name="identity" value="Other" /> Other</label>
+      </div>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-name">
+        <strong>Tapiwa Mathew Muwomo</strong><br />
+        Salesforce Developer | CRM Specialist
+      </div>
+
+      <div class="footer-links">
+        <a href="mailto:muwomotapiwa@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
+        <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
+        <a href="assets/Tapiwa_Muwomo_Resume.pdf" target="_blank">Download Resume</a>
+      </div>
+
+      <div class="footer-note">
+        <p>© <span id="year"></span> Tapiwa Muwomo. Built with 💙 HTML, CSS & JS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
