@@ -54,8 +54,10 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('show');
 });
 
+
 function toggleBlog(button) {
   const post = button.closest('.blog-post');
   post.classList.toggle('collapsed');
   button.textContent = post.classList.contains('collapsed') ? 'Read More' : 'Show Less';
 }
+
