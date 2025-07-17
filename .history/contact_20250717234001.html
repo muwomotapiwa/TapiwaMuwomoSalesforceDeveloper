@@ -48,19 +48,32 @@
     <h2>Get in Touch</h2>
     <p>If you'd like to collaborate, hire, or just say hello — feel free to reach out.</p>
 
-    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+  <!-- Web3Forms Access Key -->
   <input type="hidden" name="access_key" value="af31cdca-fdb5-4fd7-81bd-762838f8e47f" />
-  <input type="hidden" name="redirect" value="thankyou.html" />
+
+  <!-- Custom Email Subject -->
   <input type="hidden" name="subject" value="New Form Submission from your TapiwaMuwomoSalesforceDeveloper Website" />
+
+  <!-- Redirect to homepage -->
+  <input type="hidden" name="redirect" value="/thankyou.html" />
+
+  <!-- Optional: Identify Website -->
   <input type="hidden" name="Website" value="TapiwaMuwomoSalesforceDeveloper" />
+
+  <!-- Honeypot for spam protection -->
   <input type="checkbox" name="botcheck" class="hidden" style="display:none;" />
 
+  <!-- Full Name -->
   <label for="name">Full Name</label>
   <input type="text" id="name" name="Full Name" required />
 
+  <!-- Email -->
   <label for="email">Email Address</label>
   <input type="email" id="email" name="Email" required />
 
+  <!-- Identity Radio Options -->
   <label>I am a...</label>
   <div>
     <label><input type="radio" name="Identity" value="Recruiter" required /> Recruiter</label><br />
@@ -70,12 +83,13 @@
     <label><input type="radio" name="Identity" value="Other" /> Other</label>
   </div>
 
+  <!-- Message -->
   <label for="message">Message</label>
   <textarea id="message" name="Message" rows="5" required></textarea>
 
+  <!-- Submit -->
   <button type="submit" class="btn">Send Message</button>
 </form>
-
 
   </section>
 
