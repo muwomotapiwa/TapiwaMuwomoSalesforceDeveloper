@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thank you for your message – Tapiwa Mathew Muwomo" />
+  <title>Thank You | Tapiwa Muwomo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero .tagline {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero button.btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      background-color: #007bcc;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero button.btn:hover {
+      background-color: #005fa3;
+    }
+
+    footer.site-footer {
+      background-color: #091d43;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+
+  <script>
+    // Auto-redirect to blog after 5 seconds
+    setTimeout(() => {
+      window.location.href = "blog.html";
+    }, 10000);
+  </script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">Tapiwa Muwomo</div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sfmc.html">SFMC Developer</a></li>
+      <li><a href="pardot.html">Pardot</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Thank You Section -->
+<header class="hero">
+  <h1>Thank You!</h1>
+  <p class="tagline">Your message has been received. I’ll get back to you shortly.</p>
+  <p>Feel free to check out my latest <a href="blog.html">blog posts</a>.</p>
+  <button onclick="location.href='blog.html'" class="btn">Go to Blog</button>
+</header>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-name">
+      <strong>Tapiwa Mathew Muwomo</strong><br />
+      Salesforce Developer | CRM Specialist
+    </div>
+    <div class="footer-links">
+      <a href="mailto:muwomotapiwa@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
+      <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
+      <a href="assets/Tapiwa_Muwomo_Resume.pdf" target="_blank">Download Resume</a>
+    </div>
+    <div class="footer-note">
+      <p>© 2025 Tapiwa Muwomo. Built with 💙 HTML, CSS & JS.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
