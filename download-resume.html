@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Download Resume - Tapiwa Mathew Muwomo"/>
+  <title>Download Resume | Tapiwa Mathew Muwomo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .resume-section {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 640px;
+      height: 550px;
+      border: none;
+    }
+
+    #toggle-theme {
+      margin-top: 20px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Tapiwa Muwomo</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sfmc.html">SFMC Developer</a></li>
+        <li><a href="pardot.html">Pardot</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="download-resume.html" class="active">Download Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <div class="hero">
+    <h1>Download My Resume</h1>
+    <p>Thank you for taking the time to visit my site. I truly appreciate your interest and I look forward to hearing from you after reviewing my resume.</p>
+    <button id="toggle-theme">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section class="resume-section">
+      <p>Please fill in the form below. The resume will be sent to your email address.</p>
+
+      <!-- Embedded Google Form -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdfVISokuPgQSTghTcIe6K7abQNMeDTsoWZW_Ycoc4-Igl-aw/viewform?embedded=true" allowfullscreen>Loading…</iframe>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-name">
+        <strong>Tapiwa Mathew Muwomo</strong><br />
+        Salesforce Developer | CRM Specialist
+      </div>
+
+      <div class="footer-links">
+        <a href="mailto:muwomotapiwa@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/mathew-muwomo" target="_blank">LinkedIn</a>
+        <a href="https://salesforce.com/trailblazer/mathewmuwomo" target="_blank">Trailblazer</a>
+      </div>
+
+      <div class="footer-note">
+        <p>© <span id="year"></span> Tapiwa Mathew Muwomo</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Dark Mode Toggle
+    const toggleButton = document.getElementById("toggle-theme");
+    const body = document.body;
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+    }
+    toggleButton.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    });
+
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
